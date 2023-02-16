@@ -3,7 +3,9 @@ package com.example.numbercheck;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
@@ -21,5 +23,17 @@ public class NumberCheckService {
             return number +  " : is odd number";
         }
         return number + " : is even number";
+    }
+
+    public Map<String, String> demo(List<DemoClass> demoClassList) {
+        return demoClassList.stream().collect(Collectors.toMap(DemoClass::getKeyNo, DemoClass::getValue));
+    }
+
+    public void runDemo() {
+        List<DemoClass> demoList= new ArrayList<>();
+        demoList.add(new DemoClass("key1", "val1"));
+        demoList.add(new DemoClass("key2", "val2"));
+        demoList.add(new DemoClass("key3", null));
+        System.out.println(demo(demoList));
     }
 }
