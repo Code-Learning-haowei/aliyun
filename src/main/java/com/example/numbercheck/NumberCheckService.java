@@ -4,8 +4,10 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /**
@@ -25,8 +27,8 @@ public class NumberCheckService {
         return number + " : is even number";
     }
 
-    public Map<String, String> demo(List<DemoClass> demoClassList) {
-        return demoClassList.stream().collect(Collectors.toMap(DemoClass::getKeyNo, DemoClass::getValue));
+    public Map<String, DemoClass> demo(List<DemoClass> demoClassList) {
+        return demoClassList.stream().collect(Collectors.toMap(DemoClass::getKeyNo, Function.identity()));
     }
 
     public void runDemo() {
