@@ -5,6 +5,7 @@ services:
     build:
       context: .
       dockerfile: ./dockerfile
-    container_name: number-check
+    container_name: number-check-app
+    image: number-check
     ports:
       - "8080:8080"
