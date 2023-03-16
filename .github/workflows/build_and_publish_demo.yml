@@ -17,7 +17,7 @@ jobs:
         run: ./gradlew clean build
 
       - name: Build Docker image
-        run: docker-compose build .
+        run: docker-compose build
 
       - name: Push Docker image
         uses: docker/build-push-action@v2
