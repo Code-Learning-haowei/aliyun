@@ -1,0 +1,29 @@
+name: Build and Publish
+
+on:
+  push:
+    branches: [!master]
+
+jobs:
+  build-push-publish:
+    runs-on: ubuntu-latest
+    env:
+      IMAGE_TAG: user/repo:${{ github.sha }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Build with Gradle
+        run: ./gradlew clean build
+
+      - name: Build Docker image
+        run: docker-compose build .
+
+      - name: Push Docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
+          tags: ${{ env.IMAGE_TAG }}
+          username: ${{ secrets.DOCKERHUB_USER_NAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
