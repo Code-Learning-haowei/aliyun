@@ -2,7 +2,7 @@ name: Build and Publish
 
 on:
   push:
-    branches: [!master]
+    branches: [odd-or-even]
 
 jobs:
   build-push-publish:
