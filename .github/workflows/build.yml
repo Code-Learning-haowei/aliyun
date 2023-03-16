@@ -16,13 +16,7 @@ jobs:
         run: ./gradlew clean build
 
       - name: Build Docker image
-        run: docker compose build -t number-check .
-
-      - name: Login to DockerHub
-          uses: docker/login-action@v1
-          with:
-            username: ${{ secrets.DOCKERHUB_USER_NAME }}
-            password: ${{ secrets.DOCKERHUB_PASSWORD }}
+        run: docker-compose build
 
       - name: Push Docker image
         uses: docker/build-push-action@v2
