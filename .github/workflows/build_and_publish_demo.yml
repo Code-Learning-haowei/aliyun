@@ -27,11 +27,5 @@ jobs:
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
       - name: Push Docker Image
-        uses: docker/build-push-action@v2
-        with:
-          context: .
-          push: true
-          repository: harveywei64/number-check
-          tags: ${{ env.IMAGE_TAG }}
-          username: ${{ secrets.DOCKERHUB_USER_NAME }}
-          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+        run: IMAGE_VERSION=${{ env.IMAGE_TAG }} docker-compose push
+

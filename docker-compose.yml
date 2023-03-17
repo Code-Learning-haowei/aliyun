@@ -5,5 +5,9 @@ services:
     build:
       context: .
       dockerfile: ./dockerfile
+      args:
+        IMAGE_VERSION: ${IMAGE_VERSION:-latest}
+    image: harveywei64/number-check:${IMAGE_VERSION}
+    container_name: number-check-app
     ports:
       - "8080:8080"
