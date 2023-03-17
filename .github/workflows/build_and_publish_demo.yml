@@ -4,9 +4,6 @@ on:
   push:
     branches: [odd-or-even]
 
-notifications:
-  email: false
-
 jobs:
   build-push-publish:
     runs-on: ubuntu-latest
