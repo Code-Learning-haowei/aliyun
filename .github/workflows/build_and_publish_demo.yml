@@ -43,4 +43,4 @@ jobs:
             git checkout odd-or-even
             docker-compose down
             docker image prune -f
-            IMAGE_VERSION=${{ env.IMAGE_TAG }} docker-compose up
+            IMAGE_VERSION=${{ env.IMAGE_TAG }} docker-compose up --no-build
