@@ -11,6 +11,3 @@ services:
     container_name: number-check-app
     ports:
       - "8080:8080"
-  deploy:
-    image: harveywei64/number-check:${IMAGE_VERSION}
-    command: sh -c 'cd /app/harvey-aliyun && git pull && git checkout odd-or-even && docker-compose down && docker image prune -f'
