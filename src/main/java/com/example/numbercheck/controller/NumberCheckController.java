@@ -1,5 +1,6 @@
-package com.example.numbercheck;
+package com.example.numbercheck.controller;
 
+import com.example.numbercheck.service.NumberCheckService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

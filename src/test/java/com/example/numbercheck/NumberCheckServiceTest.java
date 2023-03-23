@@ -1,7 +1,7 @@
 package com.example.numbercheck;
 
+import com.example.numbercheck.service.NumberCheckService;
 import org.junit.jupiter.api.Test;
-import org.springframework.util.Assert;
 
 import java.util.List;
 

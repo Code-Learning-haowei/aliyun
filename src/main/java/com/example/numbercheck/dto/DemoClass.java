@@ -1,4 +1,4 @@
-package com.example.numbercheck;
+package com.example.numbercheck.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
