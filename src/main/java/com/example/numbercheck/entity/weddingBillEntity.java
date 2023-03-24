@@ -23,10 +23,7 @@ import java.util.Date;
 @EntityListeners(AuditingEntityListener.class)
 @Table(name = "wedding_bill")
 
-//        item_category: 项目分类，例如婚礼策划、婚纱礼服、场地布置等。
-//        item_description: 项目描述，用于描述该项目的具体内容和要求。
-
-public class WeddingBillEntity {
+public class weddingBillEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -49,10 +46,5 @@ public class WeddingBillEntity {
     @Column(name = "updated_at")
     @LastModifiedDate
     private Date updatedDate;
-
-
-
-
-
 
 }
