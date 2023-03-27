@@ -1,4 +1,4 @@
-package com.example.numbercheck.entity;
+package com.example.aliyun.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

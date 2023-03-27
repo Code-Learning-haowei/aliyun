@@ -1,4 +1,4 @@
-package com.example.numbercheck.dto;
+package com.example.aliyun.dto;
 
 import lombok.Builder;
 import lombok.Data;

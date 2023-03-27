@@ -1,6 +1,6 @@
-package com.example.numbercheck.controller;
+package com.example.aliyun.controller;
 
-import com.example.numbercheck.service.NumberCheckService;
+import com.example.aliyun.service.NumberCheckService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

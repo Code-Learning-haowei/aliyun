@@ -1,6 +1,6 @@
-package com.example.numbercheck.service;
+package com.example.aliyun.service;
 
-import com.example.numbercheck.dto.DemoClass;
+import com.example.aliyun.dto.DemoClass;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 

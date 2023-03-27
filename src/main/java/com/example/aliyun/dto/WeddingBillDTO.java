@@ -1,7 +1,7 @@
-package com.example.numbercheck.dto;
+package com.example.aliyun.dto;
 
-import com.example.numbercheck.entity.categoryTpye;
-import com.example.numbercheck.entity.weddingBillEntity;
+import com.example.aliyun.entity.categoryTpye;
+import com.example.aliyun.entity.weddingBillEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

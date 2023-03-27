@@ -1,8 +1,8 @@
-package com.example.numbercheck.service;
+package com.example.aliyun.service;
 
-import com.example.numbercheck.dto.WeddingBillDTO;
-import com.example.numbercheck.dto.weddingBillResponse;
-import com.example.numbercheck.repository.WeddingBillRepository;
+import com.example.aliyun.dto.WeddingBillDTO;
+import com.example.aliyun.dto.weddingBillResponse;
+import com.example.aliyun.repository.WeddingBillRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

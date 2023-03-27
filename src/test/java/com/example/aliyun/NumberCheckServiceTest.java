@@ -1,6 +1,6 @@
-package com.example.numbercheck;
+package com.example.aliyun;
 
-import com.example.numbercheck.service.NumberCheckService;
+import com.example.aliyun.service.NumberCheckService;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
