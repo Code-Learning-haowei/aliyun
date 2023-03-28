@@ -1,7 +1,7 @@
 package com.example.aliyun.dto;
 
 import com.example.aliyun.entity.categoryTpye;
-import com.example.aliyun.entity.weddingBillEntity;
+import com.example.aliyun.entity.WeddingBillEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -31,7 +31,7 @@ public class WeddingBillDTO {
 
     private Date updatedDate;
 
-    public WeddingBillDTO(weddingBillEntity weddingBillEntity) {
+    public WeddingBillDTO(WeddingBillEntity weddingBillEntity) {
         this.id = weddingBillEntity.getId();
         this.name = weddingBillEntity.getName();
         this.price = weddingBillEntity.getPrice();

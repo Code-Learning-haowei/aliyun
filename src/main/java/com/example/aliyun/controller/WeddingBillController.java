@@ -1,11 +1,8 @@
 package com.example.aliyun.controller;
 
-import com.example.aliyun.dto.weddingBillResponse;
 import com.example.aliyun.service.WeddingBillService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author wei.haothoughtworks.com
@@ -18,9 +15,13 @@ public class WeddingBillController {
     private WeddingBillService weddingBillService;
 
     @GetMapping("/all")
-    public weddingBillResponse getWeddingBill() {
+    public WeddingBillResponse getWeddingBill() {
         return weddingBillService.getAll();
     }
 
+    @PostMapping("/create-item")
+    public WeddingBillResponse createWeddingBillItem(@RequestBody createWeddingBillItemRequest request) {
+        return weddingBillService.createItem(request);
+    }
 
 }

@@ -1,6 +1,6 @@
 package com.example.aliyun.repository;
 
-import com.example.aliyun.entity.weddingBillEntity;
+import com.example.aliyun.entity.WeddingBillEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
@@ -12,7 +12,7 @@ import java.util.List;
  */
 @Repository
 @Component
-public interface WeddingBillRepository extends JpaRepository<weddingBillEntity, Integer> {
+public interface WeddingBillRepository extends JpaRepository<WeddingBillEntity, Integer> {
 
-    List<weddingBillEntity> findAll();
+    List<WeddingBillEntity> findAll();
 }

@@ -23,7 +23,7 @@ import java.util.Date;
 @EntityListeners(AuditingEntityListener.class)
 @Table(name = "wedding_bill")
 
-public class weddingBillEntity {
+public class WeddingBillEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
