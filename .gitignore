@@ -1,6 +1,7 @@
 HELP.md
 .gradle
 build/
+data/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
@@ -19,7 +20,7 @@ bin/
 
 ### IntelliJ IDEA ###
 .idea
-.data
+
 *.iws
 *.iml
 *.ipr

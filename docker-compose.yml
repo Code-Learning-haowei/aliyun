@@ -9,8 +9,9 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - /app/data:/var/lib/mysql
+      - ./data:/var/lib/mysql
     user: mysql
+    restart: always
 
   app:
     build:
