@@ -6,7 +6,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@EnableJpaRepositories
+@EnableJpaRepositories(basePackages = {"com.example.aliyun.repository"})
 @EnableAspectJAutoProxy
 public class NumberCheckApp {
     public static void main(String[] args) {
