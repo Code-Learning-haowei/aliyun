@@ -8,6 +8,6 @@ import java.util.List;
 
 @Data
 @Builder
-public class weddingBillResponse {
+public class WeddingBillResponse {
     private List<WeddingBillDTO> data;
 }

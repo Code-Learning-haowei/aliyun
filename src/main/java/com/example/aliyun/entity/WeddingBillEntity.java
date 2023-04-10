@@ -1,5 +1,6 @@
 package com.example.aliyun.entity;
 
+import com.example.aliyun.dto.CategoryTotalCost;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

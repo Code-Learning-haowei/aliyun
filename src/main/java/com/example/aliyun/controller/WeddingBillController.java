@@ -18,25 +18,32 @@ public class WeddingBillController {
 
     @ApiOperation("获取全部账单")
     @GetMapping(value = "/all")
-    public weddingBillResponse getWeddingBill() {
+    public WeddingBillResponse getWeddingBill() {
         return weddingBillService.getAll();
     }
 
     @ApiOperation("根据id获取账单明细")
     @GetMapping(value = "/detail/{id}")
-    public weddingBillResponse getWeddingBillById(@PathVariable("id") Integer id) {
+    public WeddingBillResponse getWeddingBillById(@PathVariable("id") Integer id) {
         return weddingBillService.getById(id);
     }
 
     @ApiOperation("根据类别获取账单明细")
     @GetMapping(value = "/detail")
-    public weddingBillResponse getWeddingBillByCategoryType(@RequestParam("type") categoryTpye type) {
+    public WeddingBillResponse getWeddingBillByCategoryType(@RequestParam("type") categoryTpye type) {
         return weddingBillService.getByCategoryType(type);
     }
 
+    @ApiOperation("获取账单总额")
+    @GetMapping(value = "/bill-cost")
+    public EachTypeCostResponse getWeddingBillCostByType() {
+        return weddingBillService.getCostByTypeTemp();
+    }
+
+
     @ApiOperation("插入新的账单")
     @PostMapping(value = "/create-item")
-    public weddingBillResponse createWeddingBillItem(@RequestBody createWeddingBillItemRequest request) {
+    public WeddingBillResponse createWeddingBillItem(@RequestBody createWeddingBillItemRequest request) {
         return weddingBillService.createItem(request);
     }
 
