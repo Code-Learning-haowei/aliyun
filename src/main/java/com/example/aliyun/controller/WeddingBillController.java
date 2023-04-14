@@ -6,6 +6,8 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * @author wei.haothoughtworks.com
  */
@@ -38,6 +40,12 @@ public class WeddingBillController {
     @GetMapping(value = "/bill-cost")
     public EachTypeCostResponse getWeddingBillCostByType() {
         return weddingBillService.getCostByTypeTemp();
+    }
+
+    @ApiOperation("临时测试，获取已有的类别")
+    @GetMapping(value = "/types")
+    public List<String> getTypes() {
+        return weddingBillService.getTypes();
     }
 
 

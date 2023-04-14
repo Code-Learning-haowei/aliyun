@@ -1,8 +1,8 @@
 package com.example.aliyun.service;
 
-import com.example.aliyun.controller.createWeddingBillItemRequest;
 import com.example.aliyun.controller.EachTypeCostResponse;
 import com.example.aliyun.controller.WeddingBillResponse;
+import com.example.aliyun.controller.createWeddingBillItemRequest;
 import com.example.aliyun.dto.CategoryTotalCost;
 import com.example.aliyun.dto.WeddingBillDTO;
 import com.example.aliyun.entity.WeddingBillEntity;
@@ -17,7 +17,6 @@ import java.util.Date;
 import java.util.List;
 
 import static java.util.stream.Collectors.toList;
-import static java.util.stream.Collectors.toMap;
 
 @Service
 public class WeddingBillService {
@@ -100,5 +99,10 @@ public class WeddingBillService {
         entity.setCreatedDate(new Date());
         entity.setUpdatedDate(new Date());
         return entity;
+    }
+
+    public List<String> getTypes() {
+         List<String> types = weddingBillRepository.getTypes();
+         return types;
     }
 }

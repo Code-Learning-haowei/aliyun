@@ -18,11 +18,9 @@ import java.util.List;
 public interface WeddingBillRepository extends JpaRepository<WeddingBillEntity, Integer> {
     List<WeddingBillEntity> findByCategoryTpye(categoryTpye categoryTpye);
 
-    @Query(value = "SELECT new com.example.aliyun.dto.CategoryTotalCost(wb.categoryTpye, SUM(wb.price)) " +
-            "FROM WeddingBillEntity wb GROUP BY wb.categoryTpye")
-     List<CategoryTotalCost> calculateCostByType();
-
     @Query(value = "SELECT categoryTpye as type, SUM(price) as cost FROM WeddingBillEntity GROUP BY categoryTpye")
     List<Object[]> calculateCostByTypeTemp();
 
+    @Query("SELECT categoryTpye as type FROM WeddingBillEntity GROUP BY categoryTpye")
+    List<String> getTypes();
 }
